@@ -1,0 +1,35 @@
+package testinho;
+
+import java.util.Scanner;
+
+public class testeeehahahah {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double xA = sc.nextDouble();
+		double xB = sc.nextDouble();
+		double xC = sc.nextDouble();
+		double yA = sc.nextDouble();
+		double yB = sc.nextDouble();
+		double yC = sc.nextDouble();
+		double areax = heron(xA, xB, xC);
+		double areay = heron(yA, yB, yC);
+		double larger = larger(areax, areay);
+		System.out.printf("area x = %.4f%n", areax);
+		System.out.printf("area y = %.4f%n", areay);
+		System.out.printf("Larger: %.4f", larger);
+		sc.close();
+	}
+	public static double heron(double a, double b, double c) {
+		double p = (a+b+c)/2;
+		return Math.sqrt(p*(p-a)*(p-b)*(p-c));
+	}
+	public static double larger(double a, double b) {
+		if (a>b) {
+			return a;
+		}
+		else {
+			return b;
+		}
+	}
+}

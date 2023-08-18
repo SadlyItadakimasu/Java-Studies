@@ -1,0 +1,19 @@
+package Program;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		double[] alturas = new double[x];
+		double media = (alturas[1]+alturas[2]+alturas[3])/x;
+		System.out.printf("AVERAGE HEIGHT: %.2f", media);
+		sc.close();
+
+	}
+
+}
